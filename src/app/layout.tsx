@@ -18,17 +18,10 @@ export const metadata: Metadata = {
     "Connect a Postgres database and ask questions in natural language. Read-only, guardrailed, schema-aware.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="bg-background text-foreground min-h-svh font-sans">
-        {children}
-      </body>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+      <body className="bg-background text-foreground min-h-svh font-sans">{children}</body>
     </html>
   );
 }
